@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_images_images",
+  "info": {
+    "displayName": "images",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "wideBanner": {
+      "type": "text"
+    },
+    "tallThumbnail": {
+      "type": "text"
+    },
+    "logo": {
+      "type": "text"
+    },
+    "wideThumbnail": {
+      "type": "text"
+    },
+    "tallBanner": {
+      "type": "text"
+    }
+  }
+}

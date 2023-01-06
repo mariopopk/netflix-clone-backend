@@ -1,0 +1,78 @@
+{
+  "kind": "collectionType",
+  "collectionName": "shows",
+  "info": {
+    "singularName": "show",
+    "pluralName": "shows",
+    "displayName": "show",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "minLength": 1
+    },
+    "images": {
+      "displayName": "images",
+      "type": "component",
+      "repeatable": false,
+      "component": "images.images"
+    },
+    "description": {
+      "type": "text",
+      "required": false,
+      "minLength": 5
+    },
+    "releaseYear": {
+      "type": "integer",
+      "min": 1800
+    },
+    "maturityLevel": {
+      "type": "enumeration",
+      "enum": [
+        "TV-Y",
+        "TV-Y7",
+        "G",
+        "TV-G",
+        "PG",
+        "TV-PG",
+        "PG-13",
+        "TV-14",
+        "R",
+        "TV-MA",
+        "NC-17"
+      ]
+    },
+    "keywords": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::keyword.keyword"
+    },
+    "starring": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::actor.actor"
+    },
+    "cast": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::actor.actor"
+    },
+    "audio": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::language.language"
+    },
+    "subtitles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::language.language"
+    }
+  }
+}
