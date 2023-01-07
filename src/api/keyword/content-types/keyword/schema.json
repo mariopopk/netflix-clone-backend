@@ -4,7 +4,8 @@
   "info": {
     "singularName": "keyword",
     "pluralName": "keywords",
-    "displayName": "keyword"
+    "displayName": "keyword",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,7 +13,10 @@
   "pluginOptions": {},
   "attributes": {
     "name": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "minLength": 1
     }
   }
 }
