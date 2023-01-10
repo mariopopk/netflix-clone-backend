@@ -8,7 +8,7 @@
     "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
@@ -51,33 +51,39 @@
     },
     "keywords": {
       "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::keyword.keyword"
+      "relation": "manyToMany",
+      "target": "api::keyword.keyword",
+      "inversedBy": "shows"
     },
     "starring": {
       "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::actor.actor"
+      "relation": "manyToMany",
+      "target": "api::actor.actor",
+      "inversedBy": "shows"
     },
     "cast": {
       "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::actor.actor"
+      "relation": "manyToMany",
+      "target": "api::actor.actor",
+      "inversedBy": "shows"
     },
     "audio": {
       "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::language.language"
+      "relation": "manyToMany",
+      "target": "api::language.language",
+      "inversedBy": "shows"
     },
     "subtitles": {
       "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::language.language"
+      "relation": "manyToMany",
+      "target": "api::language.language",
+      "inversedBy": "shows"
     },
     "genres": {
       "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::genre.genre"
+      "relation": "manyToMany",
+      "target": "api::genre.genre",
+      "inversedBy": "shows"
     }
   }
 }

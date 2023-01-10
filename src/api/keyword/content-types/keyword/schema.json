@@ -8,7 +8,7 @@
     "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
@@ -17,6 +17,12 @@
       "required": true,
       "unique": true,
       "minLength": 1
+    },
+    "shows": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::show.show",
+      "mappedBy": "keywords"
     }
   }
 }
