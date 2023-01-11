@@ -5,7 +5,17 @@ export default [
   "strapi::poweredBy",
   "strapi::logger",
   "strapi::query",
-  "strapi::body",
+  {
+    name: "strapi::body",
+    config: {
+      gzip: {
+        enabled: true,
+        options: {
+          br: false,
+        },
+      },
+    },
+  },
   "strapi::session",
   "strapi::favicon",
   "strapi::public",
