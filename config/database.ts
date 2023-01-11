@@ -1,3 +1,5 @@
+// path: ./config/env/production/database.ts
+
 import { parse } from "pg-connection-string";
 const config = parse(process.env.DATABASE_URL);
 
