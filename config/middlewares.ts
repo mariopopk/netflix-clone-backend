@@ -1,12 +1,6 @@
 export default [
   "strapi::errors",
   "strapi::security",
-  {
-    name: "strapi::compression",
-    config: {
-      br: false,
-    },
-  },
   "strapi::cors",
   "strapi::poweredBy",
   "strapi::logger",
