@@ -1,21 +1,17 @@
 export default [
   "strapi::errors",
   "strapi::security",
+  {
+    name: "strapi::compression",
+    config: {
+      br: false,
+    },
+  },
   "strapi::cors",
   "strapi::poweredBy",
   "strapi::logger",
   "strapi::query",
-  {
-    name: "strapi::body",
-    config: {
-      gzip: {
-        enabled: true,
-        options: {
-          br: false,
-        },
-      },
-    },
-  },
+  "strapi::body",
   "strapi::session",
   "strapi::favicon",
   "strapi::public",
